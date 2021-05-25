@@ -1,0 +1,23 @@
+{
+  "name": "paper_trading",
+  "version": "1.0.0",
+  "description": "A Web app for Paper Trading",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"node server/index.js\" \"cd client && npm start\"",
+    "setup": "npm install && cd server && npm install && cd ../client && npm install && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saitejach127/PaperTrading.git"
+  },
+  "author": "@saitejach127",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saitejach127/PaperTrading/issues"
+  },
+  "homepage": "https://github.com/saitejach127/PaperTrading#readme",
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}
