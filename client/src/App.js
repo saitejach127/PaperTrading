@@ -6,6 +6,7 @@ import Footer from './components/common/Footer';
 import Login from "./components/authentication/Login";
 import Register from "./components/authentication/Register";
 import Logout from "./components/authentication/Logout";
+import Companies from "./components/Companies";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/logout" component={Logout} />
+        <Route exact path="/companies" component={Companies} />
       </Router>
       <Footer />
     </React.Fragment>

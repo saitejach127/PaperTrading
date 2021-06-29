@@ -7,10 +7,17 @@ function createCookie(cookieName, cookieValue, hourToExpire) {
     cookieName + " = " + cookieValue + "; expires = " + date.toGMTString();
 }
 
-function sendGet() {}
+async function sendGet(prefix) {
+    var token = getCookie("jwttoken");
+    var headers = new Headers();
+    headers.append("Authorization", `Bearer ${token}`);
+    var response = await fetch(`${URL}/${prefix}`,{
+        headers : headers
+    });
+    return await response.json();
+}
 
 async function sendPost(prefix, body) {
-  console.log(`${URL}/${prefix}`, prefix, body);
   var response = await fetch(`${URL}/${prefix}`, {
     method: "POST",
     headers: {

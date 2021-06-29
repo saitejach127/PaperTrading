@@ -25,6 +25,8 @@ export default function Navbar() {
               <a href="/logout">Logout</a>
             </>
           )}
+          &nbsp;
+          <a href="/companies" >Companies</a>
         </p>
       </center>
     </div>
